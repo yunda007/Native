@@ -1,0 +1,9 @@
+html
+    head
+        title Materia
+    body
+        form(action=`/materia/${data.id_materia}?_method=PUT` method="post")
+            label Nombre
+                input(type="text" name="materia" value=data.materia)
+                br
+            input(type="submit" value="Editar")

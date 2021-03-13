@@ -1,0 +1,27 @@
+html
+    head
+        title Maestros
+    body
+        form(action=`/estudiante/${data.id_estudiante}?_method=PUT` method="post")
+            label Nombre
+                input(type="text" name="nombre" value=data.nombre)
+                br
+            label Apellido
+                input(type="text" name="apellido" value=data.apellido)
+                br
+            label Edad
+                input(type="text" name="edad" value=data.edad)
+                br
+            label Telefono
+                input(type="text" name="telefono" value=data.telefono)
+                br
+            label email
+                input(type="text" name="email" value=data.email)
+                br
+            label acudiente
+                input(type="text" name="acudiente" value=data.acudiente)
+                br
+            label Foto
+                input(type="text" name="foto" value=data.foto)
+                br
+            input(type="submit" value="Editar")

@@ -1,0 +1,20 @@
+html
+    head
+        title Materias
+    body
+        a(href="http://localhost:4000/materia/create") Agregar
+        table
+            tr
+                td Id
+                td Materia
+               
+                td opciones
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.materia}
+                    
+                    td
+                        form(action=`/materia/${row.id_materia}?_method=DELETE`, method="post")
+                            input(type="submit", value="Eliminar")
+                            a(href=`/materia/${row.id_materia}/edit`) Editar

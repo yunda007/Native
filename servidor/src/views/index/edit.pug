@@ -1,0 +1,12 @@
+html
+    head
+        title Productos
+    body
+        form(action=`/index/${data.id_producto}?_method=PUT` method="post")
+            label Nombre
+                input(type="text" name="nombre" value=data.nombre)
+                br
+            label Total
+                input(type="text" name="total" value=data.total)
+                br
+            input(type="submit" value="Editar")

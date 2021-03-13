@@ -1,0 +1,18 @@
+html
+    head
+        title roles
+    body
+        
+        table
+            tr
+                td ID
+                td Nombre
+                td rol
+                td compro
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.nombre}
+                    td #{row.id_rol}
+                    td #{row.id_compro}
+                  

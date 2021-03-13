@@ -1,0 +1,20 @@
+html
+    head
+        title 
+    body
+        a(href="http://localhost:4000/index/create") Agregar
+        table
+            tr
+                td ID
+                td Nombre
+                td Total
+                td aksi
+            for row, index in data
+                tr
+                    td #{index + 1}
+                    td #{row.nombre}
+                    td #{row.total}
+                    td
+                        form(action=`/index/${row.id_producto}?_method=DELETE`, method="post")
+                            input(type="submit", value="Eliminar")
+                            a(href=`/index/${row.id_producto}/edit`) Editar
